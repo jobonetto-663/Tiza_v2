@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 47% 95%;
+    --foreground: 213 39% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 213 39% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 39% 16%;
+    --primary: 213 39% 16%;
+    --primary-foreground: 40 47% 95%;
+    --secondary: 40 47% 92%;
+    --secondary-foreground: 213 39% 16%;
+    --muted: 40 47% 92%;
+    --muted-foreground: 213 20% 40%;
+    --accent: 9 76% 56%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 9 76% 56%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 213 39% 16%;
+    --input: 213 39% 16%;
+    --ring: 213 39% 16%;
+    --chart-1: 9 76% 56%;
+    --chart-2: 40 80% 56%;
+    --chart-3: 180 100% 27%;
+    --chart-4: 213 39% 16%;
+    --chart-5: 29 80% 56%;
+    --radius: 1.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .btn-retro {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-[3px] border-tiza-night font-extrabold shadow-retro transition-all;
+  }
+  .btn-retro:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0px 0px #18283B;
+  }
+  .btn-retro:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px 0px #18283B;
+  }
+  .btn-coral {
+    @apply btn-retro bg-tiza-coral py-4 text-lg text-white;
+  }
+  .btn-night {
+    @apply btn-retro bg-tiza-night py-3.5 text-base text-tiza-cream;
+  }
+  .card-retro {
+    @apply rounded-3xl border-[3px] border-tiza-night bg-white shadow-retro;
+  }
+  .card-retro-lg {
+    @apply rounded-3xl border-[3px] border-tiza-night bg-white shadow-retro;
+  }
+}
